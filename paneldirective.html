@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+
+    <div class="panel-heading">
+    	<div class="expander"
+              ng-class="{'collapsible': expandable}"
+              ng-click="toggleExpander()" >
+
+    		<span class="icon" 
+    			  ng-class="{'expander-arrow-right-icon': collapsed, 'expander-arrow-down-icon': !collapsed}" 
+    			  ng-show="expandable"></span>
+                  
+    		<h3 class="title overflow-ellipsis">{{title}}</h3>
+    	</div>
+    	
+    	<div class="controls"></div>
+    </div>
+
+    <div class="panel-body" 
+         ng-hide="collapsed" 
+         ng-style="{'max-height': height}"
+         ng-transclude></div>
+</div>
