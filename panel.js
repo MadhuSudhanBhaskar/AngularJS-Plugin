@@ -1,4 +1,4 @@
-angular.module('Panel', [])
+angular.module('test', [])
 
     .directive('panel', function ($compile, $timeout) {
         "use strict";
@@ -48,6 +48,7 @@ angular.module('Panel', [])
             },
 
             link: function (scope, element) {
+                //This is to compile the new HTML to come into the scope of angularjs
                var compiledControl = $compile(angular.element(scope.controls))(scope.$parent);
                 
                 //attach the resulting dom object to the controls-container
