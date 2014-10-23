@@ -13,7 +13,7 @@ angular.module('Panel', [])
 
             transclude: true,
 
-            templateUrl: 'panel.tpl.html',
+            templateUrl: 'paneldirective.html',
 
             controller: function ($scope, $attrs) {
 
